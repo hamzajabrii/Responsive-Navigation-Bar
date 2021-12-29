@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Cantarell&family=Raleway:wght@100&display=swap');
+
+:root {
+    --gray: #353535;
+    --black: #000000;
+    --white: #ffffff;
+    --transparent-gray: #b9b9b9;
+}
+
+
+
+body {
+    font-family: Cantarell, Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    
+}
+
+#mainHeader {
+    height: 40px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: 2fr 40px; 
+    background-color: var(--transparent-gray);
+    z-index: 10000;
+    
+
+}
+
+#mainHeader > h1 {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    color: var(--gray);
+    height: 40px;
+    margin: 0;
+    font-weight: normal;
+    font-family: Cantarell, Verdana, sans-serif;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+#mainHeader > h1 > a {
+    text-decoration: none;
+    color: var(--gray);
+    font-family: Cantarell, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+
+#mainNav {
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    padding-bottom: 10px;
+    display: none;
+    background-color: var(--transparent-gray);
+    border-top: solid 1px black;
+}
+
+#mainNav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#mainNav a {
+    color: var(--gray);
+    font-size: 1em;
+    text-decoration: none;
+    font-size: 1em;
+    display: block;
+    padding-left: 20px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+#mainNav a:hover {
+    color: var(--white);
+    background-color: var(--black);
+    border-radius: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#menuToggle {
+    width: 40px;
+    height: 40px;
+    color: var(--gray);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#mainFooter {
+    background-color: var(--black);
+    position: fixed;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+
+
+#image-back {
+    width: 100%;
+    margin-top: 40px;
+}
+
+#image-back > img {
+    width: 100%;
+}
+
+.card {
+    border: 0 !important;
+    display: flex;
+    justify-content: center !important;
+    background-color: transparent !important;
+}
+
+.card-img-top {
+    height: 70px;
+    width: 70px !important;
+    
+}
+
+.card-body > p{
+    text-align: center;
+}
+
+#infoServices {
+    margin-top: 40px;
+}
+
+#categoriesContainer {
+    margin-top: 40px;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    display: flex;
+    justify-content: center;
+}
+
+.category > img {
+    border: solid 2px;
+    border-radius: 5px;
+    border-color: var(--transparent-gray);
+    padding: 10px;
+    
+}
+
+.category > a {
+    text-decoration: none;
+    color: var(--gray);
+    text-transform: uppercase;
+    background-color: blue;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+#cat1 {
+    background-image: url('/assets/images/vape8.jpg') no-repeat;
+    width: 250px !important;
+    height: 300px;
+}
+
+#cat2 {
+    background-image: url('/assets/images/vape7.jpg');
+    width: 250px !important;
+    height: 300px;
+}
+
+#cat3 {
+    background-image: url('/assets/images/vape7.jpg');
+    background-size: cover;
+    width: 250px !important;
+    height: 300px;
+}
+
+#cat4 {
+    background-image: url('/assets/images/vape8.jpg');
+    background-size: cover;
+    width: 250px !important;
+    height: 300px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    #menuToggle {
+        display: none;
+    }
+
+    #mainHeader {
+        grid-template-columns: 200px 1fr;
+    }
+
+    #mainNav {
+        display: block;
+        position: static;
+        height: 40px;
+        padding-bottom: 0;
+    }
+
+    #mainNav ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        height: 40px;
+        align-items: center;
+    }
+
+    #mainNav a {
+        display: block;
+        padding: 0 10px;
+        font-size: 0.8em;
+    }
+}
